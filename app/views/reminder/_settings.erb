@@ -1,14 +1,16 @@
-<fieldset>
+</fieldset>
+<fieldset class="box tabular">
+<legend><%=l(:reminder_notification_title)%></legend>
+<div class="tabular">
   <legend><%= l(:reminder_default_notification_settings) %></legend>
   <p>
     <%= l(:field_reminder_notification) %>
     <%= text_field_tag 'settings[reminder_notification]', settings['reminder_notification'] %>
-    <br/>
-    <em><%= l(:text_comma_separated) %></em>
-  </p>
-
+	<br/><em><%= l(:text_comma_separated) %></em><br/>
+  </p>  
   <p>
     <%= l(:field_reminder_author_notification) %>
     <%= check_box_tag 'settings[reminder_author_notification]', settings['reminder_author_notification'], true %>
   </p>
+</div>
 </fieldset>

@@ -1,6 +1,6 @@
 en:
   reminder_default_notification_settings: "Default notification settings"
-  field_reminder_notification: "Remind about issues on these days"
+  field_reminder_notification: "remind on these days (comma seperarted)"
   error_reminder_notification_input: "Wrong input. You must enter comma separated values."
   reminder_mail_subject: "Reminder: You have issues with due dates"
   reminder_mail_body: "Issues assigned to you that have due dates"
@@ -8,5 +8,6 @@ en:
   field_reminder_author_notification: "Remind author"
   field_reminder_author_user_notification: "Remind if I am an author"
   reminder_assigned_to: "Issues assigned to you"
-  reminder_author: "You are the author of these issues"
-
+  reminder_author: "only if i am author"
+  reminder_notification_title: "Issue Reminder"
+  reminder_title: "Issue redminder"

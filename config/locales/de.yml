@@ -1,8 +1,14 @@
-# German translation by Kevin Urban (theonlyulti@gmail.com)
+# German translation
 de:
-  reminder_default_notification_settings: "Standard Benachrichtigungs-Einstellungen"
-  field_reminder_notification: "Erinnere mich an Tickets an folgenden Tagen zuvor"
+  reminder_default_notification_settings: "Standard Benachrichtigungseinstellungen"
+  field_reminder_notification: "erinnere an Tagen zuvor (trenne durch Kommas)"
   error_reminder_notification_input: "Fehlerhafte Eingabe. Geben sie komma-getrennte Werte ein."
-  reminder_mail_subject: "Erinnerung: Sie haben Tickets mit (bald) fälligem Abgabedatum"
-  reminder_mail_body: "Ihnen zugewiesene Tickets mit (bald) fälligem Abgabedatum"
-  reminder_days_overdue: "%{days} Tag(e) abgelaufen"
+  reminder_mail_subject: "Erinnerung: Mir zugewiesene  Tickets werden fällig"
+  reminder_mail_body: "Ihnen sind Tickets zugewiesen die demnächst das Abgabedatum erreicht haben."
+  reminder_days_overdue: vor "%{days} Tag(en) abgelaufen"
+  field_reminder_author_notification: "Author erinnern"
+  field_reminder_author_user_notification: "nur wenn ich Author bin"
+  reminder_assigned_to: "Mir zugewiesene Tickets"
+  reminder_author: "Ich bin Autor dieser Tickets"
+  reminder_notification_title: "Benachrichtigung der fälligen Tickets"
+  reminder_title: "Ticketerinnerung"

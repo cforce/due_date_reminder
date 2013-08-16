@@ -12,16 +12,22 @@ module Reminder
 
     def view_my_account(context={})
       <<-SRC
-      <p id='reminder_notification'>
+	  </fieldset>
+	  <fieldset class="box" id="reminder_notification">
+      <legend>
+	    #{l(:reminder_title)}
+	  </legend>
+	  <div class="tabular">
+	    <p>
         #{context[:form].text_field :reminder_notification, :required => true, :size => 10,
                                     :value => context[:user].reminder_notification}
-        <br/>
-        <em>#{label_tag 'text_comma_separated', l(:text_comma_separated)}</em>
-
+        </p>
+		<p>
         #{context[:form].check_box :reminder_author_notification,
                             :label => :field_reminder_author_user_notification}
-
-      </p>
+        </p>
+      </div>
+	  </fieldset>
       SRC
     end
   end
