@@ -1,19 +1,17 @@
 <p><%= l(:reminder_mail_body) %>:</p>
 
-<% @projects.each do |project, issues| -%>
+<% @projects.each do |project, group| -%>
 
-    <h2><%= "#{project.name}" %></h2>
+    <h2>Project: <%= project.name %></h2>
     <ul>
-    <% issues.keys.each do |attr| -%>
-        <h3><%= "#{l(ReminderMailer.issue_attrs[attr].to_sym)}" %></h3>
-        <% issues[attr].each do |issue| -%>
+    <% group.each do |name, issues| -%>
+        <h3><%= l(ReminderMailer.issue_attrs[name].to_sym) %></h3>
+        <% issues.each do |issue| -%>
         <%
            name = "#{issue.tracker} ##{issue.id}: #{issue.subject}"
-           if issue.overdue?
-             caption = "! #{l(:reminder_days_overdue, :days => issue.days_before_due_date.abs)}! #{name}"
-           else
-             caption = "* #{name} (#{l(:field_due_date)}: #{issue.due_date})"
-           end
+           caption = "#{name} (#{l(:field_due_date)}: #{issue.due_date})"
+           
+           caption += " - #{l(:reminder_days_overdue, :days => issue.days_before_due_date.abs)}!" if issue.overdue?
         -%>
         <li>
         <%= link_to caption,issue_url(issue) %>
@@ -23,4 +21,4 @@
     </ul>
 <% end -%>
 
-<%= @issues_url %>
+<a href="<%= @issues_url %>">Link to this report</a>
