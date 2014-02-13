@@ -17,9 +17,9 @@ module Reminder
         elsif assigned_to.is_a?(User) and ((assigned_to.reminder_notification_array.include?(days_before_due_date) or overdue?)) or
                 (author.reminder_notification? and
                  (author.reminder_notification_array.include?(days_before_due_date) or overdue?))
-
+          return true
         else
-           return false
+          return false
         end
       end
     end
